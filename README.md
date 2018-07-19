@@ -21,3 +21,5 @@ $git clone https://github.com/Atileon/OC-p8.git
 ```
 $npm install
 ```
+
+### [More Information...](https://github.com/Atileon/OC-p8/wiki 'Wiki wiki')
