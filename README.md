@@ -1,6 +1,6 @@
 # Openclassrooms Project 8
 
-![todos](img/todosApp.png)
+![todos](img/TodosApp.png)
 
 This project aims to enhance an existing project following the next points:
 
