@@ -6,8 +6,14 @@
       <meta name='viewport' content='width=device-width, initial-scale=1.0'>
       <title>To-do list app</title>
        <!-- The next request is useless -->
-		<!-- <link rel="stylesheet" href="node_modules/todomvc-common/base.css"> -->
-		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+      <!-- <link rel="stylesheet" href="node_modules/todomvc-common/base.css"> -->
+      
+      <!-- Because there was a bug to be Fixed on default stylesheet for the 'Toggle All input' the 
+      next request has been avoided because once installed the module package the 
+      stylesheet return with the same error/bug. Thus Copy paste on a CSS folder the stylesheet fixed and deleted the dependency from the package.json-->
+
+      <!-- <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css"> -->
+      <link rel='stylesheet' href='css/index.css'>
 	</head>
 	<body>
 		<section class="todoapp">
@@ -40,7 +46,8 @@
 			<p>Double-click to edit a todo</p>
 			<p>Created by Oscar Godson</p>
 			<p>Refactored by Christoph Burgmer</p>
-		</footer>
+      </footer>
+      <!-- The next request is useless -->
 		<!-- <script src="node_modules/todomvc-common/base.js"></script> -->
 		<script defer src="js/helpers.js"></script>
 		<script defer src="js/store.js"></script>
