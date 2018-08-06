@@ -82,14 +82,23 @@
     var todos = data.todos;
 
     callback = callback || function() {};
+   // FIXED: Is not a good Idea to create an Id on this way because though 
+   //the probabilities are little to be duplicated however the risk 
+   //persist. so we can create an Id based on something unic as an Date() method  
 
     // Generate an ID
-    var newId = "";
-    var charset = "0123456789";
+   //  var newId = "";
+   //  var charset = "0123456789";
 
-    for (var i = 0; i < charset.length; i++) {
-      newId += charset.charAt(Math.floor(Math.random() * charset.length));
-    }
+   //  for (var i = 0; i < charset.length; i++) {
+   //    newId += charset.charAt(Math.floor(Math.random() * charset.length));
+   //  }
+// =======================================================
+
+   //  We got to generate an ID in the Correct way
+   let newId = new Date().getTime();
+   //  we would passed this value on the else statemanet instead of the parseInt
+// ===========================================================
 
     // If an ID was actually given, find the item and update each property
     if (id) {
@@ -105,8 +114,10 @@
       localStorage[this._dbName] = JSON.stringify(data);
       callback.call(this, todos);
     } else {
-      // Assign an ID
-      updateData.id = parseInt(newId);
+      // Assign an ID FIXED
+
+      // updateData.id = parseInt(newId);
+      updateData.id = newId;
 
       todos.push(updateData);
       localStorage[this._dbName] = JSON.stringify(data);
